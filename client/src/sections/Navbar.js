@@ -29,7 +29,7 @@ const Navbar = () => {
             </div>
 
             <div className='navbar__carte'>
-                <AiOutlineShoppingCart color="#fff" size={27} onClick={() => {}} />
+                <AiOutlineShoppingCart className='icon_hover' color="#fff" size={27} onClick={() => {}} />
             </div>
 
             <div className='navbar__menu'>

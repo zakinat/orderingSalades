@@ -1,8 +1,8 @@
 .saladCard{
-    @include flex-jst_dC-al_dC();
+    @include flex-jst_dC-al_dC($jst:flex-start);
     flex-direction: column;
     background-color: $color-secondbg;
-
+    color: $color-text;
     &__img{
         width: 100%;
         img{
@@ -11,5 +11,52 @@
         }
     }
 
+    &__info{
+        @include flex-jst_dC-al_dC();
+        flex-direction: column;
+        width: 100%;
+        span{
+            margin-left: 5px;
+        }
+        p{
+            color: $color-subtext;
+        }
+        
+    }
+
+    &__control{
+        margin-top: 2rem;
+        width: 100%;
+        @include flex-jst_dC-al_dC($jst:space-between);
+
+        &-amount{
+            @include flex-jst_dC-al_dC();
+            input{
+                width: 30px;
+                margin-left: 5px;
+                margin-right: 5px;
+                background-color:$color-card ;
+                outline: none;
+                border: none;
+                padding: 5px;
+                color: #fff;
+                
+            }
+        }
+        button{
+            background: #3CB371;
+            border-radius: 4px;
+            padding: 0.1rem 0.5rem;
+            color:#fff;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
 
 }
+
