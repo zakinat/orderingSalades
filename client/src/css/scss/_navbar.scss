@@ -1,0 +1,133 @@
+.navbar{
+    @include flex-jst_dC-al_dC($jst:space-between);
+    padding: 1rem 4rem;
+        &__links{
+            flex: 1;
+            @include flex-jst_dC-al_dC($jst:flex-start);
+
+                &-logo{
+                    margin-right:2rem ;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        
+                    }
+                }
+
+                &-container{
+                    display: flex;
+                    flex-direction: row;
+                    p{
+                        @extend .navbar__links-p;
+                    }
+                }
+        }
+
+        &__carte{
+           @include flex-jst_dC-al_dC($jst:flex-end);
+           margin-right: 1rem;
+        }
+
+        &__menu{
+            margin-left: 1rem;
+            display: none;
+            position: relative;
+
+                svg{
+                    cursor: pointer;
+                }
+                
+                &-container{
+                    @include flex-jst_dC-al_dC($jst:flex-end);
+                    flex-direction: column;
+                    text-align: center;
+                    background: $color-footer;
+                    padding: 2rem;
+                    position: absolute;
+                    top: 40px;
+                    right: 0;
+                    margin-top: 1rem;
+                    min-width: 210px;
+                    border-radius: 5px;
+                    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+                        button{
+                            @extend .navbar__sign-button;   
+                        }
+                        &-links{
+                            p{
+                                @extend .navbar__links-p;
+                                color: RED ;
+                                margin:1rem 0 !important;
+                            }
+            
+                            &-sign{
+                                display: none;
+                            }
+                        }  
+                }
+        }
+}
+
+
+
+
+
+//extended classes
+.navbar__links-p{
+    color: #fff;
+    font-family: $font_family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    margin: 0 1rem;
+    cursor: pointer;
+
+}
+
+.navbar__sign-button{
+    padding: 0.5rem 1rem;
+    color:#fff;
+    background-color: #ff4820;
+    font-family: $font_family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+//media queries
+@media screen and (max-width: 1050px){
+    .navbar__links-container{
+        display: none;
+    }
+    .navbar__menu{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .navbar{
+        padding: 2rem 4rem;
+    }
+    
+}
+
+@media screen and (max-width: 550px){
+    .navbar{
+        padding: 2rem;
+    }
+    .navbar__sign{
+        display: none;
+    }
+    .navbar__menu-container{
+        top: 20px;
+    }
+    .navbar__menu-container-links-sign{
+        display: block;
+    }
+    
+}
