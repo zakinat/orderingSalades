@@ -3,17 +3,11 @@ import res from './dummydata'
 import {SaladCard} from '../components'
 
 const SaladsList = () => {
-
-    const [saldasList, setSaldasList] = useState(res)
+    const [saldasList, setSaldasList] = useState(res.resualt)
 
     return (
-        <div>
-        {saldasList.map((salad)=>{
-            return(
-                <SaladCard salad={salad} key={salad._id}/>
-            )
-        })}
-            
+        <div className='saladList' id='oursalad'>
+            {saldasList.map((salad)=> <SaladCard salad={salad} key={salad._id}/>)}
         </div>
     )
 }

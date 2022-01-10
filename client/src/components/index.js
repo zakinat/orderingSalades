@@ -1,1 +1,3 @@
-export {default as SaladCard} from './SaladCard'
+import SaladCard from './SaladCard'
+
+export {SaladCard}

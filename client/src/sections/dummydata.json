@@ -1,87 +1,79 @@
 {
   "success": true,
   "result": [
-    {
-      "_id": "61a49832cd52c5df4d363979",
-      "title": "Atomic Food",
-      "price": 39,
-      "discount_price": 35.1,
-      "composition": [
-        "61a49832cd52c5df4d36396b",
-        "61a49832cd52c5df4d363968",
-        "61a49832cd52c5df4d363969"
-      ],
-      "__v": 0
-    },
-    {
-      "_id": "61a49832cd52c5df4d363985",
-      "title": "King of electrons",
-      "price": 33,
-      "discount_price": 29.7,
-      "composition": [
-        "61a49832cd52c5df4d36396c",
-        "61a49832cd52c5df4d36396a",
-        "61a49832cd52c5df4d363969"
-      ],
-      "__v": 0
-    },
-    {
-      "_id": "61a49832cd52c5df4d363973",
-      "title": "MegaMol",
-      "price": 17,
-      "discount_price": 15.3,
-      "composition": [
-        "61a49832cd52c5df4d36396b"
-      ],
-      "__v": 0
-    },
-    {
-      "_id": "61a49832cd52c5df4d363976",
-      "title": "MicroSnack",
-      "price": 51,
-      "discount_price": 45.9,
-      "composition": [
-        "61a49832cd52c5df4d36396b",
-        "61a49832cd52c5df4d363968",
-        "61a49832cd52c5df4d363969",
-        "61a49832cd52c5df4d36396a"
-      ],
-      "__v": 0
-    },
-    {
-      "_id": "61a49832cd52c5df4d36397c",
-      "title": "MoleFresh",
-      "price": 33,
-      "discount_price": 29.7,
-      "composition": [
-        "61a49832cd52c5df4d36396c",
-        "61a49832cd52c5df4d36396a",
-        "61a49832cd52c5df4d363969"
-      ],
-      "__v": 0
-    },
-    {
-      "_id": "61a49832cd52c5df4d363982",
-      "title": "Simple salad",
-      "price": 37,
-      "discount_price": 33.300000000000004,
-      "composition": [
-        "61a49832cd52c5df4d36396b",
-        "61a49832cd52c5df4d363968"
-      ],
-      "__v": 0
-    },
-    {
-      "_id": "61a49832cd52c5df4d36397f",
-      "title": "The best particulars",
-      "price": 39,
-      "discount_price": 35.1,
-      "composition": [
-        "61a49832cd52c5df4d36396b",
-        "61a49832cd52c5df4d363968",
-        "61a49832cd52c5df4d363969"
-      ],
-      "__v": 0
-    }
+      {
+          "_id": "61d534e632d90dc7eb49f233",
+          "title": "Atomic Food",
+          "price": 39,
+          "discount_price": 35.1,
+          "composition": [
+              "61d534e632d90dc7eb49f225",
+              "61d534e632d90dc7eb49f222",
+              "61d534e632d90dc7eb49f223"
+          ],
+          "__v": 0
+      },
+      {
+          "_id": "61d534e632d90dc7eb49f23f",
+          "title": "King of electrons",
+          "price": 33,
+          "discount_price": 29.7,
+          "composition": [
+              "61d534e632d90dc7eb49f226",
+              "61d534e632d90dc7eb49f224",
+              "61d534e632d90dc7eb49f223"
+          ],
+          "__v": 0
+      },
+      {
+          "_id": "61d534e632d90dc7eb49f22d",
+          "title": "MegaMol",
+          "price": 19,
+          "discount_price": 17.1,
+          "composition": [
+              "61d534e632d90dc7eb49f226"
+          ],
+          "__v": 0
+      },
+      {
+          "_id": "61d534e632d90dc7eb49f230",
+          "title": "MicroSnack",
+          "price": 17,
+          "discount_price": 15.3,
+          "composition": [
+              "61d534e632d90dc7eb49f225"
+          ],
+          "__v": 0
+      },
+      {
+          "_id": "61d534e632d90dc7eb49f236",
+          "title": "MoleFresh",
+          "price": 17,
+          "discount_price": 15.3,
+          "composition": [
+              "61d534e632d90dc7eb49f225"
+          ],
+          "__v": 0
+      },
+      {
+          "_id": "61d534e632d90dc7eb49f23c",
+          "title": "Simple salad",
+          "price": 17,
+          "discount_price": 15.3,
+          "composition": [
+              "61d534e632d90dc7eb49f225"
+          ],
+          "__v": 0
+      },
+      {
+          "_id": "61d534e632d90dc7eb49f239",
+          "title": "The best particulars",
+          "price": 17,
+          "discount_price": 15.3,
+          "composition": [
+              "61d534e632d90dc7eb49f225"
+          ],
+          "__v": 0
+      }
   ]
 }

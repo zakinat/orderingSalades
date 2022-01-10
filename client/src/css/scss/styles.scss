@@ -2,6 +2,9 @@
 @import 'mixins';
 @import 'utility';
 @import 'navbar';
+@import 'saladList';
+@import 'saladCard';
+
 
 
 
@@ -22,4 +25,5 @@
 
   .App{
     height: 100vh;
+
   }

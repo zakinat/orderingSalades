@@ -1,0 +1,27 @@
+.saladList{
+    padding: 1rem 4rem;
+    @include flex-jst_dC-al_dC();
+    flex-wrap: wrap;
+    background-color: $color-bg;
+
+    
+}
+
+
+
+//media queries
+
+
+@media screen and (max-width: 700px){
+    .saladList{
+        padding: 2rem 4rem;
+    }
+    
+}
+
+@media screen and (max-width: 550px){
+    .saladList{
+        padding: 2rem;
+    }
+    
+}

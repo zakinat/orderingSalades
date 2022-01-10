@@ -7,7 +7,6 @@ import logo from '../images/Logo.svg'
 const Menu =({clsToggle})=>{
     return(
         <>
-         <p><a href='#home'  onClick={clsToggle?()=>clsToggle(false):undefined}>Home</a></p>
          <p><a href='#oursalad' onClick={clsToggle?()=>clsToggle(false):undefined}>Order our salad</a></p>
          <p><a href='#makeursalad' onClick={clsToggle?()=>clsToggle(false):undefined}>Make your own salad</a></p>
         </>

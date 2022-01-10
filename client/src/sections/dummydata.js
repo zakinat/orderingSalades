@@ -1,5 +1,4 @@
-import jsonAPI from './dummydata.json'
+import  jsonAPI from './Dummydata.json'
 
-const result =  JSON.parse(jsonAPI)
-const res=result.result
+const res={resualt: jsonAPI.result}
 export default res
