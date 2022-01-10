@@ -24,7 +24,7 @@ export const saladsList = (state = {
 
 //ActionCreaters
 
-// getting stories from server
+// getting salads from server
 export const getSaladsList=()=> async (dispatch)=>{
     try {
         const {data} =await api.fetchSaladsList()
@@ -44,5 +44,7 @@ const Salads_failed=(err)=>({
     type:ActionTypes.SALADS_FAILD,
     payload:err
     })
+
+
 
 

@@ -2,7 +2,10 @@ import React,{useState} from 'react'
 import {RiMenu3Line,RiCloseLine } from 'react-icons/ri'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 import logo from '../images/Logo.svg'
-
+import {useSelector} from 'react-redux' 
+import {useModal} from '../hooks'
+import Modal from '../components/Modal'
+import {Carte} from './'
 
 const Menu =({clsToggle})=>{
     return(
@@ -15,8 +18,10 @@ const Menu =({clsToggle})=>{
 }
 
 const Navbar = () => {
-    const [toggleMenu, setToggleMenu] = useState(false);
 
+    const {isShowing, toggle} =useModal()
+    const [toggleMenu, setToggleMenu] = useState(false);
+    const carteOrders = useSelector(state => state.carteList.carteList)
     return (
         <div className='navbar gradient__bg'>
             <div className='navbar__links'>
@@ -29,7 +34,11 @@ const Navbar = () => {
             </div>
 
             <div className='navbar__carte'>
-                <AiOutlineShoppingCart className='icon_hover' color="#fff" size={27} onClick={() => {}} />
+                <AiOutlineShoppingCart className='icon_hover' color="#fff" size={35} onClick={toggle} />
+                {carteOrders.length>0 ? <span className='navbar__carte-badge'>{carteOrders.length}</span>:undefined}
+                <Modal isShowing={isShowing} toggle={toggle}>
+                    {carteOrders.length>0 ? <Carte/>: <h1>Carte is empty</h1>}
+                </Modal>
             </div>
 
             <div className='navbar__menu'>

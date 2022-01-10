@@ -1,3 +1,7 @@
 export const SALADS_FETCHED = 'SALADS_FETCHED';
 export const SALADS_LOADING = 'SALADS_LOADING';
 export const SALADS_FAILD = 'SALADS_FAILD';
+
+
+
+export const  ADD_TO_CARTE='ADD_TO_CARTE'
