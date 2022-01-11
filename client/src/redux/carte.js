@@ -11,7 +11,17 @@ export const carteList = (state = {
 }, action) => {
     switch (action.type) {
         case ActionTypes.ADD_TO_CARTE:
-            return{...state, isLoading:false, errMess:null, carteList:state.carteList.concat(action.payload)}
+            const alreadythere=false
+            let carteList=state.carteList.map(item=>{
+                if (item.id === action.payload.id){
+                    item.qty= item.qty + action.payload.qty
+                    alreadythere=true
+                    return item
+                }
+                return item
+            })
+            if(!alreadythere) carteList=state.carteList.concat(action.payload)
+            return{...state, isLoading:false, errMess:null,carteList }
         default:
           return state;
       }

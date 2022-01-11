@@ -63,18 +63,11 @@
                     min-width: 210px;
                     border-radius: 5px;
                     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-                        button{
-                            @extend .navbar__sign-button;   
-                        }
+                        
                         &-links{
                             p{
                                 @extend .navbar__links-p;
-                                color: RED ;
                                 margin:1rem 0 !important;
-                            }
-            
-                            &-sign{
-                                display: none;
                             }
                         }  
                 }
@@ -98,20 +91,6 @@
 
 }
 
-.navbar__sign-button{
-    padding: 0.5rem 1rem;
-    color:#fff;
-    background-color: #ff4820;
-    font-family: $font_family;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 5px;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-}
-
 //media queries
 @media screen and (max-width: 1050px){
     .navbar__links-container{
@@ -133,14 +112,8 @@
     .navbar{
         padding: 2rem;
     }
-    .navbar__sign{
-        display: none;
-    }
     .navbar__menu-container{
         top: 20px;
-    }
-    .navbar__menu-container-links-sign{
-        display: block;
     }
     
 }

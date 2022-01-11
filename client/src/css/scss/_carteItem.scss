@@ -1,11 +1,1 @@
 
-.carte{
-    background-color: #042c54;
-}
-.carteItem{
-    @include flex-jst_dC-al_dC($jst:space-between);
-    margin-top: 1rem;
-    border-bottom: #fff solid ;
-    padding: 1rem 0;
-    color: $color-text;
-}

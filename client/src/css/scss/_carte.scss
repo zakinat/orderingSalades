@@ -1,0 +1,44 @@
+.carte{
+    @include flex-jst_dC-al_dC();
+    flex-direction: column;
+    background-color: #042c54;
+
+
+    &__control{
+        margin-top: 2rem;
+        width: 100%;
+        @include flex-jst_dC-al_dC($jst:space-between);
+
+        &-clear{
+            padding: 5px;
+            background-color:#042c54 ;
+            color: #fff;
+            font-size: 1.2rem;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        &-order{
+            padding: 5px;
+            background-color:#3CB371 ;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+
+    }
+
+
+}
+
+
+.carteItem{
+    @include flex-jst_dC-al_dC($jst:space-between);
+    width: 100%;
+    margin-top: 1rem;
+    border-bottom: #fff solid ;
+    padding: 1rem 0;
+    color: $color-text;
+}
