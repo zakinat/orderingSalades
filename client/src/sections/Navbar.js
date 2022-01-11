@@ -4,7 +4,7 @@ import {AiOutlineShoppingCart} from 'react-icons/ai'
 import logo from '../images/Logo.svg'
 import {useSelector} from 'react-redux' 
 import {useModal} from '../hooks'
-import Modal from '../components/Modal'
+import {Modal} from '../components'
 import {Carte} from './'
 
 const Menu =({clsToggle})=>{

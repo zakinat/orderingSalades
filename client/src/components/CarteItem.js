@@ -1,16 +1,28 @@
 import React,{useState} from 'react'
 import {AiOutlinePlus, AiOutlineMinus} from 'react-icons/ai'
+import {updtOrderCarte} from '../redux/carte'
+import { useDispatch } from 'react-redux'
 
-export const CarteItem = ({item}) => {
+
+const CarteItem = ({item}) => {
+
+    const dispatch = useDispatch()
 
 
     const [amount, setAmount] = useState(item.qty)
+
     const decreasAmount=()=>{
-        if (amount>0) setAmount(+amount-1)
+        if (amount>0) {
+            setAmount(+amount-1)
+            const data={id:item.id, qty:-1, name: item.name}
+            dispatch(updtOrderCarte(data))
+        }
     }
 
     const increasAmount=()=>{
          setAmount(+amount+1)
+         const data={id:item.id, qty:1, name: item.name}
+            dispatch(updtOrderCarte(data))
     }
 
 
@@ -25,3 +37,5 @@ export const CarteItem = ({item}) => {
         </div>
     )
 }
+
+export default CarteItem

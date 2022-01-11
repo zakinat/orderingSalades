@@ -1,3 +1,1 @@
-import useModal from "./useModal";
-
-export  {useModal}
+export {default as useModal} from './useModal'

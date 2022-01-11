@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navbar, SaladsList} from '../sections'
+import {Navbar, SaladsList, MakeUrSalad} from '../sections'
 
 
 const LandingPage = () => {
@@ -7,6 +7,7 @@ const LandingPage = () => {
         <div>
             <Navbar/>
             <SaladsList/>
+            <MakeUrSalad/>
         </div>
     )
 }
