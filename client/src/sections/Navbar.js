@@ -22,6 +22,8 @@ const Navbar = () => {
     const {isShowing, toggle} =useModal()
     const [toggleMenu, setToggleMenu] = useState(false);
     const carteOrders = useSelector(state => state.carteList.carteList)
+    const orderStatus= useSelector(state => state.carteList.orderStatus)
+
     return (
         <div className='navbar gradient__bg'>
             <div className='navbar__links'>
@@ -37,7 +39,7 @@ const Navbar = () => {
                 <AiOutlineShoppingCart className='icon_hover' color="#fff" size={35} onClick={toggle} />
                 {carteOrders.length>0 ? <span className='navbar__carte-badge'>{carteOrders.length}</span>:undefined}
                 <Modal isShowing={isShowing} toggle={toggle}>
-                    {carteOrders.length>0 ? <Carte/>: <h1>Carte is empty</h1>}
+                    {(carteOrders.length>0 || orderStatus) ? <Carte/>: <h1 >Carte is empty</h1>}
                 </Modal>
             </div>
 

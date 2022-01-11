@@ -3,28 +3,20 @@
     flex-direction: column;
     background-color: #042c54;
 
-
+    h1{
+        color: #fff;
+    }
     &__control{
         margin-top: 2rem;
         width: 100%;
-        @include flex-jst_dC-al_dC($jst:space-between);
+        @include flex-jst_dC-al_dC();
 
         &-clear{
-            padding: 5px;
-            background-color:#042c54 ;
-            color: #fff;
-            font-size: 1.2rem;
-            outline: none;
-            border: none;
-            cursor: pointer;
+            @extend .scnd-button;
         }
 
         &-order{
-            padding: 5px;
-            background-color:#3CB371 ;
-            color: #fff;
-            font-size: 1.2rem;
-            cursor: pointer;
+            @extend .main-button;
         }
 
 

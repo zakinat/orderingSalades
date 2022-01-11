@@ -7,12 +7,17 @@ import * as api from '../api'
 export const carteList = (state = {
     isLoading:true,
     errMess:null,
-    carteList:[]
+    carteList:[],
+    orderStatus:false,
 }, action) => {
     switch (action.type) {
         case ActionTypes.ADD_TO_CARTE:
             let alreadythere=false
             let carteList=state.carteList.map(item=>{
+                if(item.name === action.payload.name) {
+                    alreadythere=true
+                    return item
+                }
                 if (item.id === action.payload.id){
                     item.qty= item.qty + action.payload.qty
                     alreadythere=true
@@ -21,7 +26,7 @@ export const carteList = (state = {
                 return item
             })
             if(!alreadythere) carteList=state.carteList.concat(action.payload)
-            return{...state, isLoading:false, errMess:null,carteList }
+            return{...state, isLoading:false, errMess:null,carteList, orderStatus:false }
         case ActionTypes.UPT_IN_CARTE:
              carteList=state.carteList.map(item=>{
                 if (item.id === action.payload.id){
@@ -30,7 +35,13 @@ export const carteList = (state = {
                 }
                 return item
             })
-            return{...state, isLoading:false, errMess:null,carteList }
+            return{...state, isLoading:false, errMess:null,carteList, orderStatus:false}
+        case ActionTypes.ORDER_SUCCESS:
+            if(action.payload.success){
+                return{...state, isLoading:false, errMess:null,carteList:[],orderStatus:true }
+            }else{
+                return{...state, isLoading:false, errMess:null,carteList,orderStatus:false }
+            }
         default:
           return state;
       }
@@ -63,5 +74,28 @@ const updt_order_in_carte=(data)=>({
     type:ActionTypes.UPT_IN_CARTE,
     payload:data
     })
+
+
+
+
+//send order
+export const sendOrder=(order)=> async (dispatch)=>{
+    try {
+        const {data}= await api.postOrder(order)
+        dispatch(send_order(data))
+    } catch (err) {
+        dispatch(order_Failed(err))
+    }
+    }
+    
+     const send_order=(data)=>({
+            type:ActionTypes.ORDER_SUCCESS,
+            payload:data
+            })
+        
+     const order_Failed=(err)=>({
+            type:ActionTypes.ORDER_FAILED,
+            payload:err
+            })
 
 

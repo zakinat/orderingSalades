@@ -3,13 +3,14 @@ import {DiAtom} from 'react-icons/di'
 import {GiAtomCore, GiAtom, GiAtomicSlashes} from 'react-icons/gi'
 
 const colors=getRandomArrColor()
+const size=35
 
 const iconsArr=[
-    <BiAtom color={getRandColor()} size={27}/>,
-    <DiAtom color={getRandColor()} size={27}/>,
-    <GiAtom color={getRandColor()} size={27}/>,
-    <GiAtomCore color={getRandColor()} size={27}/>,
-    <GiAtomicSlashes color={getRandColor()} size={27}/>,
+    <BiAtom color={getRandColor()} size={size}/>,
+    <DiAtom color={getRandColor()} size={size}/>,
+    <GiAtom color={getRandColor()} size={size}/>,
+    <GiAtomCore color={getRandColor()} size={size}/>,
+    <GiAtomicSlashes color={getRandColor()} size={size}/>,
 ]
 
 export const getRandomIcon=()=>{

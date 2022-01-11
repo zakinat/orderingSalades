@@ -1,18 +1,33 @@
 import React,{useState} from 'react'
 import {getRandomIcon} from '../utils/atomIconsArr'
 import {AiOutlinePlus, AiOutlineMinus} from 'react-icons/ai'
+//importing redux
+import { useDispatch } from 'react-redux'
+import {addMolecule} from '../redux/molecules'
+import {useSelector} from 'react-redux' 
 
 
 const MoleculeItem = ({molecule}) => {
-
-
+    const dispatch = useDispatch()
+    
     const [amount, setAmount] = useState(0)
+
+
     const decreasAmount=()=>{
-        if (amount>0) setAmount(+amount-1)
+        if (amount>0) {
+            setAmount(+amount-1)
+            const data={id:molecule._id, qty:-1, name: molecule.title}
+            dispatch(addMolecule(data))
+            
+        }
     }
 
     const increasAmount=()=>{
-        if(amount < molecule.qty) setAmount(+amount+1)
+        if(amount < molecule.qty) {
+            setAmount(+amount+1)
+            const data={id:molecule._id, qty:1, name: molecule.title}
+            dispatch(addMolecule(data))
+        }
     }
 
 
@@ -20,7 +35,7 @@ const MoleculeItem = ({molecule}) => {
         <div className='moleculeItem'>
         
             <div className='moleculeItem__info'>
-                <span>{getRandomIcon()}</span>
+                <span className='moleculeItem__info-icon'>{getRandomIcon()}</span>
                 <div>
                     <h3>{molecule.title}</h3>
                     <p>price:<span>{molecule.price}</span>$</p>

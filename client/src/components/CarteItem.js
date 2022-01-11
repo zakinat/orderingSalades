@@ -20,9 +20,12 @@ const CarteItem = ({item}) => {
     }
 
     const increasAmount=()=>{
-         setAmount(+amount+1)
-         const data={id:item.id, qty:1, name: item.name}
+        if ( item.name !== 'special order'){
+            setAmount(+amount+1)
+            const data={id:item.id, qty:1, name: item.name}
             dispatch(updtOrderCarte(data))
+        }
+         
     }
 
 

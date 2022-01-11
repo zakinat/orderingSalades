@@ -1,0 +1,86 @@
+.makeSalad{
+    padding: 1rem 4rem;
+    @include flex-jst_dC-al_dC($al:flex-start);
+    flex-direction: column;
+    background-color: $color-bg;
+
+    &__content{
+        padding: 1rem 4rem;
+        background-color: $color-secondbg;
+        width: 100%;
+        border-radius: 5px;
+
+        h2{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            color: $color-text;
+        }
+        &-control{
+            margin-top: 2rem;
+            width: 100%;
+            @include flex-jst_dC-al_dC();
+            &-clear{
+                @extend .scnd-button;
+            }
+    
+            &-order{
+                @extend .main-button;
+            }
+        }
+        
+
+    }
+}
+
+.moleculeItem{
+    margin-top: 1rem;
+    
+    @include flex-jst_dC-al_dC($jst:space-between,$al:flex-start);
+    width: 100%;
+
+    &__info{
+        @include flex-jst_dC-al_dC();
+        &-icon{
+            margin-right: 1rem;
+        }
+        h3{
+            color: $color-subtext;
+        }
+        p{
+            color: #fff;
+        }
+    }
+
+    &__control{
+        @include flex-jst_dC-al_dC($al:flex-start);
+
+        &-input{
+            @include flex-jst_dC-al_dC();
+            input{
+                width: 30px;
+                margin-left: 5px;
+                margin-right: 5px;
+                background-color:$color-card ;
+                outline: none;
+                border: none;
+                padding: 5px;
+                color: #fff;
+            }
+            p{
+                font-size: 1.2rem;
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .moleculeItem{
+        flex-direction: column;
+        @include flex-jst_dC-al_dC();
+        &__control{
+            margin-top: 1rem;
+        }
+    }
+    
+}

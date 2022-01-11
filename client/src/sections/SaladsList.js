@@ -5,7 +5,6 @@ import {SaladCard} from '../components'
 import {useDispatch} from 'react-redux'
 import {getSaladsList} from '../redux/saladsList'
 import {useSelector} from 'react-redux' 
-
 const SaladsList = () => {
 
     const dispatch=useDispatch();
