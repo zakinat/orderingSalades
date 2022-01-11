@@ -4,7 +4,6 @@ import {AiOutlinePlus, AiOutlineMinus} from 'react-icons/ai'
 //importing redux
 import { useDispatch } from 'react-redux'
 import {addMolecule} from '../redux/molecules'
-import {useSelector} from 'react-redux' 
 
 
 const MoleculeItem = ({molecule}) => {

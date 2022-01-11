@@ -11,7 +11,7 @@ const Menu =({clsToggle})=>{
     return(
         <>
          <p><a href='#oursalad' onClick={clsToggle?()=>clsToggle(false):undefined}>Order our salad</a></p>
-         <p><a href='#makeursalad' onClick={clsToggle?()=>clsToggle(false):undefined}>Make your own salad</a></p>
+         <p><a href='#makeSalad' onClick={clsToggle?()=>clsToggle(false):undefined}>Make your own salad</a></p>
         </>
     )
     

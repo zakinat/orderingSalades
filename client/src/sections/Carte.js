@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import {useSelector} from 'react-redux' 
 import { CarteItem } from '../components'
 
@@ -6,16 +6,10 @@ import { CarteItem } from '../components'
 import {useDispatch} from 'react-redux'
 import {sendOrder} from '../redux/carte'
 
-
-
-
 const Carte = () => {
     const carteList = useSelector(state => state.carteList.carteList)
     const orderStatus= useSelector(state => state.carteList.orderStatus)
     
-
-    
-
     const dispatch=useDispatch();
     const sendorder=(data)=>dispatch(sendOrder(data))
 
